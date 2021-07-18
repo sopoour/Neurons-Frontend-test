@@ -12,25 +12,22 @@ const Card  = ({ data }) => {
                 <a className="characterName" href={data.person.url} target="_blank">
                     <p>{data.person.name}</p>
                 </a> 
-                
             </div>
-            
+            <div className="cardInfo">
+                <ul >
+                    <li>Country: {data.person.country.name}</li>
+                    <li>Birthday: {data.person.birthday}</li>
+                    <a href={data.character.url} target="_blank">
+                        <li>Character: {data.character.name}</li>
+                    </a>
+                </ul>
+            </div>
         </div>
-        
     );
 };
 
 export default Card;
 
 /**
- * <div className="cardInfo">
-                    <ul >
-                        <li>Country: {data.person.country.name}</li>
-                        <li>Birthday: {data.person.birthday}</li>
-                        <a href={data.character.url} target="_blank">
-                            <li>Character: {data.character.name}</li>
-                        </a>
-                    </ul>
-
-                </div>
+ * 
  */
