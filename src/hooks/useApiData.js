@@ -1,6 +1,8 @@
 import {useState, useEffect} from 'react';
 
 const useApiData = () => {
+    //TODO: create one const for castData and one for episodeData
+    
     const [apiData, setApiData] = useState([]);
 
     useEffect(() => {
@@ -17,7 +19,10 @@ const useApiData = () => {
         //this allows me to use the lifecycle method inside of a functional component
     }, []);
 
+
     return apiData;
 };
 
 export default useApiData;
+
+
