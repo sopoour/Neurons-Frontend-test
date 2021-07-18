@@ -14,8 +14,6 @@ const Card  = ({ data }) => {
                 </a> 
                 
             </div>
-           
-        
             
         </div>
         

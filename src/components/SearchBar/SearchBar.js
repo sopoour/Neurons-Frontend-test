@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './SearchBar.css'
 import useSearchData from '../../hooks/useSearchData';
 
-const SearchBar  = ({ data }) => {
-    const {searchTerm, handleChange} = useSearchData(data);
+const SearchBar  = ({ searchTerm, handleChange }) => {
 
     return(
         <div>
