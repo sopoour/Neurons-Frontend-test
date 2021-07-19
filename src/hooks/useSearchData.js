@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 const useSearchData = (data) => {
     const [searchTerm, setSearchterm] = useState ('');
     const [searchResults, setSearchResults] = useState([]);
+    
     const handleChange = event =>{
       setSearchterm(event.target.value);
     };
@@ -23,6 +24,7 @@ const useSearchData = (data) => {
           )
           //then the filtered list (results) is set on the searchResults state by using the setSearchResults method
           setSearchResults(results);
+          console.log("SearchResults")
       })
     //filter through existing array casts and check if the cast in the casts list includes searchTerm
       ();

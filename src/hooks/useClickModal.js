@@ -34,12 +34,8 @@ const useClickModal = () => {
           document.removeEventListener("touchstart", handleClick);   
         };
       }, [dropdownRef, buttonRef]);
-     
-    const handleSelect = () => {
-        setIsOpen(false);
-    };
 
-    return {isOpen, setIsOpen, buttonRef, dropdownRef, handleSelect};
+    return {isOpen, setIsOpen, buttonRef, dropdownRef};
 };
 
 export default useClickModal;
