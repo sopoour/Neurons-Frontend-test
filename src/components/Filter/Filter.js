@@ -28,17 +28,21 @@ const Filter = ({ data, setFilter, filter, handleUpdate }) => {
             {isOpen && (
                 <div ref={dropdownRef} className="filterModal">
                     <div> 
+                        <h4>Country</h4>
                         <select value={filter.country} onChange={event => setFilter({country: event.target.value})}>
-                            <option value=""> Country... </option>
+                            <option value=""> Select Country... </option>
                             {/* unique set of filter values*/}
                             {filterSet(data.map(value => value.person.country.name))}
                         </select>
+                        <h4>Gender</h4>
                         <select value={filter.gender} onChange={event => setFilter({gender: event.target.value})}>
-                            <option value=""> Gender... </option>
+                            <option value=""> Select Gender... </option>
                             {/* unique set of filter values*/}
                             {filterSet(data.map(value => value.person.gender))}
                         </select>
+                       
                         <div className="filterModalActions">
+                            
                             {/*when clicking on select button change isOpen back to false so modal closes*/}
                             <button onClick={handleUpdate}> 
                             Update

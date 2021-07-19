@@ -6,40 +6,52 @@
 .filterButton {
     border-radius: 5px;
     padding: 8px 16px;
-    background-color: #408aeb;
+    background-color: white;
+    border-color: rgba(24, 146, 121, 1);
+    border-style: solid;
     cursor: pointer;
-    font-weight: 500;
-    color: white;
-    font-size: 18px;
-    line-height: 1.5;
+    color: rgba(24, 146, 121, 1);
+    font-size: 16px;
+    text-align: center;
 }
 
 .filterButton:hover {
-    background-color: #092b58;
+    background-color: rgba(24, 146, 121, 1);
+    color: white;
 }
 
-.filterButton:focus {
-    outline: 1px dashed;
-    outline: 1px auto -webkit-focus-ring-color;
-}
 
 .filterModal {
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    padding: 0.25rem;
-    display: overlay;
-    width: 16rem;
+    padding: 15%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     z-index: 2;
-    left: 0;
     max-height: calc(100vh - 152px);
     position: absolute;
     margin-top: 0.5rem;
     background-color: white;
-   }
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+}
+
+.filterModal select {
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    outline: none;
+    padding: 1%;
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+}
 
 .filterModalActions {
     border-top-width: 1px;
     border-top-color: #e4e7eb;
     border-top-style: solid;
+    margin-top: 15%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -49,7 +61,7 @@
 .filterModalActions button {
     border-radius: 0.125rem;
     padding: 0.25rem 0.5rem;
-    background-color: #2b7de9;
+    background-color: rgba(24, 146, 121, 1);
     border-color: transparent;
     color: white;
     font-weight: 600;

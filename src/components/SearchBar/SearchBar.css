@@ -4,9 +4,11 @@ input[type=text] {
     margin-top: 8px;
     margin-right: 16px;
     font-size: 17px;
-    width: 717px;
+    width: 500px;
     height: 34px;
     border: 1px solid #C4C4C4;
+    border-style: solid;
+    border-radius: 5px;
     box-sizing: border-box;
     font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
       font-style: normal;

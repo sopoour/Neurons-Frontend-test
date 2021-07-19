@@ -9,7 +9,6 @@
     margin: 1%;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     background-color: rgba(236, 235, 235, 0.5);
-    overflow-wrap: break-word;
     width: 200px;
     height: 400px;
 }
@@ -21,7 +20,6 @@
 
 .cardInfo {
     display: inline-flex;
-    overflow-wrap: break-word;
 }
 
 .cardInfo ul {
