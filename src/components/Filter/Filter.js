@@ -3,10 +3,12 @@ import {useState, useEffect, useRef} from 'react';
 import './Filter.css'
 import useClickModal from '../../hooks/useClickModal';
 
+
 const Filter = ({ data, setFilter, filter, handleUpdate }) => {
     
     //Call custom hook for click behavior
     const {isOpen, setIsOpen, buttonRef, dropdownRef} = useClickModal();
+
 
     const filterSet = (dataPoint) => {
         return Array.from(new Set (dataPoint)).map(c => (
@@ -31,10 +33,14 @@ const Filter = ({ data, setFilter, filter, handleUpdate }) => {
                             {/* unique set of filter values*/}
                             {filterSet(data.map(value => value.person.country.name))}
                         </select>
-                        
+                        <select value={filter.gender} onChange={event => setFilter({gender: event.target.value})}>
+                            <option value=""> Gender... </option>
+                            {/* unique set of filter values*/}
+                            {filterSet(data.map(value => value.person.gender))}
+                        </select>
                         <div className="filterModalActions">
                             {/*when clicking on select button change isOpen back to false so modal closes*/}
-                            <button onClick={() => handleUpdate}> 
+                            <button onClick={handleUpdate}> 
                             Update
                             </button>
                         </div>
