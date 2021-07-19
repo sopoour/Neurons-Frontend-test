@@ -2,7 +2,8 @@ import React from 'react';
 import './Casts.css'
 import CardContainer from '../CardContainer/CardContainer';
 import SearchBar from '../SearchBar/SearchBar';
-import {useState, useEffect} from 'react';
+import Filter from '../Filter/Filter';
+import {useState, useEffect, useRef} from 'react';
 //import useSearchData from '../../hooks/useSearchData';
 
 const Casts = ({ data }) => {
@@ -22,6 +23,7 @@ const Casts = ({ data }) => {
       setSearchterm(event.target.value);
     };
 
+    //TRY TO MOVE THIS INTO OWN CUSTOM HOOK: useSearchData
     /*
     * 1. useEffect hook executes whenever dependency of method gets changed
     * 2. dependency searchTerm gets changed on every input by user
@@ -43,13 +45,23 @@ const Casts = ({ data }) => {
         ();
     }, [data, searchTerm]);
 
+    //SEARCH - END
+
+    
+
+
+
     return(
         
         <div className="castsContainer">
-            <SearchBar 
-                searchTerm={searchTerm} 
-                handleChange={handleChange}>
-            </SearchBar>
+            <div className="searchFilter">
+                <SearchBar 
+                    searchTerm={searchTerm} 
+                    handleChange={handleChange}>
+                </SearchBar>
+                <Filter></Filter>
+            </div>
+            
             <CardContainer data={searchResults}></CardContainer>
         </div>
         
