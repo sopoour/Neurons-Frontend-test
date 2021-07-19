@@ -13,16 +13,20 @@ const useSearchData = (data) => {
     * 3. this in turn executes function in first argument (=results)
     */
     useEffect(() => {
-        (async () => {
-            const results = await data.filter(value => 
-                value.character.name.toLowerCase().includes(searchTerm.toLowerCase())
-                );
-                //then the filtered list (results) is set on the searchResults state by using the setSearchResults method
-                setSearchResults(results);
-        })
-      //filter through existing array casts and check if the cast in the casts list includes searchTerm
-        ();
-    }, [data, searchTerm]);
+      (async () => {
+          const results = await data.filter(value => {
+              return (
+                  //search for either character or actor/actress name
+                  value.character.name.toLowerCase().includes(searchTerm.toLowerCase())
+                  || value.person.name.toLowerCase().includes(searchTerm.toLowerCase())
+              )}
+          )
+          //then the filtered list (results) is set on the searchResults state by using the setSearchResults method
+          setSearchResults(results);
+      })
+    //filter through existing array casts and check if the cast in the casts list includes searchTerm
+      ();
+  }, [data, searchTerm]);
 
     return {searchResults, searchTerm, handleChange};
 };
