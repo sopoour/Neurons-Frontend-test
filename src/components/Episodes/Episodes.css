@@ -1,0 +1,4 @@
+.castsContainer {
+    display: flex;
+    flex-direction: column;
+}

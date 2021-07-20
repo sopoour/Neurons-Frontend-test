@@ -4,14 +4,6 @@
 }
 
 .searchFilter {
+    display: flex;
     justify-content: space-between;
-}
-
-.castsContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-.searchFilter {
-    display: flex;
 }

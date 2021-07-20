@@ -1,15 +1,14 @@
 input[type=text] {
-    float: left;
     padding: 6px;
     margin-top: 8px;
-    margin-right: 16px;
     font-size: 17px;
     width: 500px;
-    height: 34px;
+    height: 36px;
     border: 1px solid #C4C4C4;
     border-style: solid;
     border-radius: 5px;
     box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
       font-style: normal;
       font-weight: normal;
