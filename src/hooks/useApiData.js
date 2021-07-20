@@ -3,16 +3,24 @@ import {useState, useEffect} from 'react';
 const useApiData = () => {
     //TODO: create one const for castData and one for episodeData
     
-    const [apiData, setApiData] = useState([]);
+    const [castData, setCastData] = useState([]);
+    const [episodeData, setEpisodeData] = useState([]);
 
     useEffect(() => {
         (async () => {
-            const response = await fetch(
+            const responseCast = await fetch(
                 'https://api.tvmaze.com/shows/143/cast'
             );
-            const data = await response.json()
+            const dataCast = await responseCast.json()
             //Update apiData state with the data we get from API
-            setApiData(data);
+            setCastData(dataCast);
+
+            const responseEpisode = await fetch(
+                'https://api.tvmaze.com/shows/143/episodes'
+            );
+            const dataEpisode = await responseEpisode.json()
+            //Update apiData state with the data we get from API
+            setEpisodeData(dataEpisode);
         }) 
         //call function right away
         ();
@@ -20,7 +28,7 @@ const useApiData = () => {
     }, []);
 
 
-    return apiData;
+    return {castData, episodeData};
 };
 
 export default useApiData;

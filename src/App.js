@@ -7,11 +7,13 @@ import Episodes from './components/Episodes/Episodes';
 
 
 const App = () => {
-    const apiData = useApiData();
-    console.log(apiData);
+    const {castData, episodeData} = useApiData();
 
     const [isCast, setIsCast] = useState(true);
     const [isEpisode, setIsEpisode] = useState(false);
+
+    console.log(castData);
+    console.log(episodeData)
     
     return (
       <div className="App">
@@ -19,10 +21,18 @@ const App = () => {
         setIsCast={setIsCast}
         setIsEpisode={setIsEpisode}></Nav>
         {isCast && (
-          <Casts data={apiData}></Casts>
+          <Casts 
+            data={castData}
+            isCast={isCast}
+            isEpisode={isEpisode}>
+          </Casts>
         )}
         {isEpisode && (
-          <Episodes data={apiData}></Episodes>
+          <Episodes 
+            data={episodeData}
+            isCast={isCast}
+            isEpisode={isEpisode}
+          ></Episodes>
         )}
         
       </div>

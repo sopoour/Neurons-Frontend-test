@@ -6,11 +6,11 @@ import Filter from '../Filter/Filter';
 import useFilterData from '../../hooks/useFilterData';
 
 
-const Casts = ({ data }) => {
+const Casts = ({ data, isCast, isEpisode }) => {
 
     //call custom hook to process search filter
     const {result, searchTerm, filter, setFilter, handleUpdate, handleChange} = useFilterData(data);
-
+    console.log('Casts: ' + data)
     console.log("Current filter: " + filter.country + "& " + filter.gender)
     
     return(
@@ -28,8 +28,11 @@ const Casts = ({ data }) => {
                     handleUpdate={handleUpdate}>
                 </Filter>
             </div>
-            
-            <CardContainer data={result}></CardContainer>
+            <CardContainer 
+                data={data}
+                isCast={isCast}
+                isEpisode={isEpisode}>
+            </CardContainer>
         </div>
         
     );
