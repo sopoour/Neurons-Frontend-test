@@ -8,7 +8,7 @@ const useFilterData = (data) => {
     const [filter, setFilter] = useState({
       country: '',
       gender: '',
-      alive: [true, false],
+      alive: '',
       bday: ''
     });
     const [result, setResult] = useState([]);
