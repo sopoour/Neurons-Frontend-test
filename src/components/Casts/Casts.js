@@ -22,14 +22,14 @@ const Casts = ({ data, isCast, isEpisode }) => {
                     handleChange={handleChange}>
                 </SearchBar>
                 <Filter 
-                    data={data}
+                    data={result}
                     filter={filter}
                     setFilter={setFilter}
                     handleUpdate={handleUpdate}>
                 </Filter>
             </div>
             <CardContainer 
-                data={data}
+                data={result}
                 isCast={isCast}
                 isEpisode={isEpisode}>
             </CardContainer>

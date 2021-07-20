@@ -11,18 +11,18 @@ const Card  = ({ data, isCast, isEpisode}) => {
             {isCast && (
                 <div className="cards">
                     <div className="blockImage">
-                        <img alt='character img' src={ data.person.image.medium }></img>
+                        <img alt='character_img' src={ data.person.image.medium }></img>
                         <i className={gender}></i>
-                        <a className="characterName" href={data.person.url} target="_blank">
+                        <a className="name" href={data.person.url} target="_blank">
                             <p>{data.person.name}</p>
                         </a> 
                     </div>
                     <div className="cardInfo">
                         <ul >
-                            <li>Country: {data.person.country.name}</li>
-                            <li>Birthday: {data.person.birthday}</li>
+                            <li><b>Country: </b>{data.person.country.name}</li>
+                            <li><b>Birthday: </b>{data.person.birthday}</li>
                             <a href={data.character.url} target="_blank">
-                                <li>Character: {data.character.name}</li>
+                                <li><b>Character: </b>{data.character.name}</li>
                             </a>
                         </ul>
                     </div>
@@ -32,16 +32,17 @@ const Card  = ({ data, isCast, isEpisode}) => {
             {isEpisode && (
                 <div className="cards">
                     <div className="blockImage">
-                        <img alt='img' src={ data.image.medium }></img>
-                        <a className="characterName" href={data.url} target="_blank">
+                        <img alt='movie_img' src={ data.image.medium }></img>
+                        <p className="series">S{data.season}/E{data.number}</p>
+                        <a className="name" href={data.url} target="_blank">
                             <p>{data.name}</p>
                         </a> 
                     </div>
-                    <div className="cardInfo">
+                    <div className="cardInfo episode">
                         <ul >
-                            <li>Summary: {data.summary}</li>
-                            <li>S{data.season}, E{data.number}</li>
-                            <li>Airtime: {data.airtime}</li>
+                            <li className='summary'><b>Summary: </b>{data.summary.replace('<p>', '').replace('</p>', '')}</li>
+                            <li></li>
+                            <li><b>Airtime: </b>{data.airtime}</li>
                         </ul>
                     </div>
                 </div>
