@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import './Nav.css';
+import logo from './logo-pied-piper.png'
 
 const Nav  = ({setIsCast, setIsEpisode}) => {
 
 
     return(
         <div className='nav'>
-          <img src='logo-pied-piper.png' className="appLogo" alt="logo" />
+          <img src={logo} className="appLogo" alt="logo" />
           <button id='cast' className='actBtn' onClick={() => {
             setIsCast(true); 
             setIsEpisode(false)
