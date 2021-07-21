@@ -6,6 +6,8 @@
 I've deployed the React app to a subpath of my existing personal website that is hosted via Github Pages:
 https://sophiaauer.me/tvshow_search/
 
+The app is not responsive so that it's recommended to look at it on Desktop!
+
 ### Overall Setup & Considerations
 
 #### Component Tree
