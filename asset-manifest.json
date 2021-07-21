@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tvshow_search/static/css/main.f099958d.chunk.css",
+    "main.css": "/tvshow_search/static/css/main.25265244.chunk.css",
     "main.js": "/tvshow_search/static/js/main.2bf24358.chunk.js",
     "main.js.map": "/tvshow_search/static/js/main.2bf24358.chunk.js.map",
     "runtime-main.js": "/tvshow_search/static/js/runtime-main.89f3ba8a.js",
@@ -10,14 +10,14 @@
     "static/js/3.14d898f1.chunk.js": "/tvshow_search/static/js/3.14d898f1.chunk.js",
     "static/js/3.14d898f1.chunk.js.map": "/tvshow_search/static/js/3.14d898f1.chunk.js.map",
     "index.html": "/tvshow_search/index.html",
-    "static/css/main.f099958d.chunk.css.map": "/tvshow_search/static/css/main.f099958d.chunk.css.map",
+    "static/css/main.25265244.chunk.css.map": "/tvshow_search/static/css/main.25265244.chunk.css.map",
     "static/js/2.dde2973c.chunk.js.LICENSE.txt": "/tvshow_search/static/js/2.dde2973c.chunk.js.LICENSE.txt",
     "static/media/logo-pied-piper.85544334.png": "/tvshow_search/static/media/logo-pied-piper.85544334.png"
   },
   "entrypoints": [
     "static/js/runtime-main.89f3ba8a.js",
     "static/js/2.dde2973c.chunk.js",
-    "static/css/main.f099958d.chunk.css",
+    "static/css/main.25265244.chunk.css",
     "static/js/main.2bf24358.chunk.js"
   ]
 }
