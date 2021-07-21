@@ -25,8 +25,8 @@ https://sophiaauer.me/tvshow_search/
 #### Custom hooks
 - **useApiData:** used in `App` component to call Cast and Episode data
 - **useClickModal:** used in `Filter` component to open and close filter modal
-- **useFilterData:** used in `Casts` component to process filter and search input and pass on searchFilter result to CardContainer component
-- **useSearchData:** used in `Episodes` component to process search input and pass on search result to CardContainer component
+- **useFilterData:** used in `Casts` component to process filter and search input and pass on `searchFilter` result to `CardContainer` component
+- **useSearchData:** used in `Episodes` component to process search input and pass on search result to `CardContainer` component
 
 #### Limitations & planned Improvements
 
