@@ -9,6 +9,9 @@ https://sophiaauer.me/tvshow_search/
 ### Overall Setup & Considerations
 
 #### Component Tree
+
+The `App` component can be found in the `src` directory and all the toher components are in the `src/components` directory:
+
 ```bash
 └── App
     ├── Nav
@@ -23,6 +26,8 @@ https://sophiaauer.me/tvshow_search/
     │       └── Card
 ```
 #### Custom hooks
+All the custom hooks can be found in the `src/hooks` directory:
+
 - **useApiData:** used in `App` component to call Cast and Episode data
 - **useClickModal:** used in `Filter` component to open and close filter modal
 - **useFilterData:** used in `Casts` component to process filter and search input and pass on `searchFilter` result to `CardContainer` component
@@ -30,17 +35,18 @@ https://sophiaauer.me/tvshow_search/
 
 #### Limitations & planned Improvements
 
-- I've used for now only plane JS and CSS since I'm still in the process of learning TS and it felt like another level of complexity that I wanted to avoid for now
-- I've used CSS quite simplistic via normal CSS file import but would like to dive deeper into styled components to use styling in a bit of a cleaner way
-- The solution for the Cast & Episode split between two tabs might not be the prettiest (using states to switch between Cast and Episode). For now, I couldn't find another way to do it but I'll be looking into some other solutions (just cuz I'm curious)
+- I know the requirement stated that you shouldn't use any React boilerplate, such as Create React App, but since it's been the first time using React I've used `create-react-app` to get started easily.
+- I've used for now only plane JS and CSS since I'm still in the process of learning TS and it felt like another level of complexity that I wanted to avoid for now.
+- I've used CSS quite simplistic via normal CSS file import but would like to dive deeper into styled components to use styling in a bit of a cleaner way.
+- The solution for the Cast & Episode split between two tabs might not be the prettiest (using states to switch between Cast and Episode). For now, I couldn't find another way to do it but I'll be looking into some other solutions (just cuz I'm curious).
 - I had some problems implementing the filter in a more sophisticated and clean way:
   - The Filter is only implemented for Cast tab. Therefore using those two separate hooks `useFilterData` for Cast and `useSearchData` for Episode.
   - The `Update` button within the Filter modal doesn't work. The `handleUpdate` function somehow isn't working or not correctly called. Therefore, the result changes as soon as you select a filter.
-  -  for some reason when filtering after `Male`, it shows all the Cast, tho when filtering for `Female` it works correctly (I need to look into it more in depth)
-  -  Each Filter & Search only works individually and not combined
+  -  for some reason when filtering after `Male`, it shows all the Cast, tho when filtering for `Female` it works correctly (I need to look into it more in depth).
+  -  Each Filter & Search only works individually and not combined.
 - API data call
   - I believe there is probably a cleaner and more sophisticated solution to make the `fetch()` between two API requests.
-  - right now it's not the cleanest and ideally I wanted to return only one variable `apiData` that contains either the Cast or the Episode data. I couldn't resolve it in time so I've came up with the less sophisticated solution passing on the data in two different constants
+  - right now it's not the cleanest and ideally I wanted to return only one variable `apiData` that contains either the Cast or the Episode data. I couldn't resolve it in time so I've came up with the less sophisticated solution passing on the data in two different constants.
 - Generic Card component
   - Initially I wanted to create a generic card component that takes props as inputs passed from CardContainer and Casts or Episodes. However, it failed due to the mapping of the Cards within the CardContainer. 
   - Hence, I've created two JSX divs for each Cast and Episode within the Card component and let it switch between those depending on the state set for the clicked buttons `Cast` or `Episodes`. 
