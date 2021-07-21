@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/tvshow_search/static/css/main.1c41a013.chunk.css",
-    "main.js": "/tvshow_search/static/js/main.bc9d4d9b.chunk.js",
-    "main.js.map": "/tvshow_search/static/js/main.bc9d4d9b.chunk.js.map",
+    "main.css": "/tvshow_search/static/css/main.f099958d.chunk.css",
+    "main.js": "/tvshow_search/static/js/main.2bf24358.chunk.js",
+    "main.js.map": "/tvshow_search/static/js/main.2bf24358.chunk.js.map",
     "runtime-main.js": "/tvshow_search/static/js/runtime-main.89f3ba8a.js",
     "runtime-main.js.map": "/tvshow_search/static/js/runtime-main.89f3ba8a.js.map",
     "static/js/2.dde2973c.chunk.js": "/tvshow_search/static/js/2.dde2973c.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.14d898f1.chunk.js": "/tvshow_search/static/js/3.14d898f1.chunk.js",
     "static/js/3.14d898f1.chunk.js.map": "/tvshow_search/static/js/3.14d898f1.chunk.js.map",
     "index.html": "/tvshow_search/index.html",
-    "static/css/main.1c41a013.chunk.css.map": "/tvshow_search/static/css/main.1c41a013.chunk.css.map",
+    "static/css/main.f099958d.chunk.css.map": "/tvshow_search/static/css/main.f099958d.chunk.css.map",
     "static/js/2.dde2973c.chunk.js.LICENSE.txt": "/tvshow_search/static/js/2.dde2973c.chunk.js.LICENSE.txt",
     "static/media/logo-pied-piper.85544334.png": "/tvshow_search/static/media/logo-pied-piper.85544334.png"
   },
   "entrypoints": [
     "static/js/runtime-main.89f3ba8a.js",
     "static/js/2.dde2973c.chunk.js",
-    "static/css/main.1c41a013.chunk.css",
-    "static/js/main.bc9d4d9b.chunk.js"
+    "static/css/main.f099958d.chunk.css",
+    "static/js/main.2bf24358.chunk.js"
   ]
 }
