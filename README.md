@@ -1,7 +1,54 @@
-# Neurons Front-end Developer Coding Test
+# Neurons Front-end developer Test
+
+## Documentation by Sophia
+
+### Demo
+I've deployed the React app to a subpath of my existing personal website that is hosted via Github Pages:
+https://sophiaauer.me/tvshow_search/
+
+### Overall Setup & Considerations
+
+#### Component Tree
+```bash
+└── App
+    ├── Nav
+    ├── Casts
+    │   ├── SearchBar
+    │   ├── Filter
+    │   └── CardContainer
+    │       └── Card
+    └── Episodes
+    │   ├── SearchBar
+    │   └── CardContainer
+    │       └── Card
+```
+#### Custom hooks
+- **useApiData:** used in `App` component to call Cast and Episode data
+- **useClickModal:** used in `Filter` component to open and close filter modal
+- **useFilterData:** used in `Casts` component to process filter and search input and pass on searchFilter result to CardContainer component
+- **useSearchData:** used in `Episodes` component to process search input and pass on search result to CardContainer component
+
+#### Limitations & planned Improvements
+
+- I've used for now only plane JS and CSS since I'm still in the process of learning TS and it felt like another level of complexity that I wanted to avoid for now
+- I've used CSS quite simplistic via normal CSS file import but would like to dive deeper into styled components to use styling in a bit of a cleaner way
+- The solution for the Cast & Episode split between two tabs might not be the prettiest (using states to switch between Cast and Episode). For now, I couldn't find another way to do it but I'll be looking into some other solutions (just cuz I'm curious)
+- I had some problems implementing the filter in a more sophisticated and clean way:
+  - The Filter is only implemented for Cast tab. Therefore using those two separate hooks `useFilterData` for Cast and `useSearchData` for Episode.
+  - The `Update` button within the Filter modal doesn't work. The `handleUpdate` function somehow isn't working or not correctly called. Therefore, the result changes as soon as you select a filter.
+  -  for some reason when filtering after `Male`, it shows all the Cast, tho when filtering for `Female` it works correctly (I need to look into it more in depth)
+  -  Each Filter & Search only works individually and not combined
+- API data call
+  - I believe there is probably a cleaner and more sophisticated solution to make the `fetch()` between two API requests.
+  - right now it's not the cleanest and ideally I wanted to return only one variable `apiData` that contains either the Cast or the Episode data. I couldn't resolve it in time so I've came up with the less sophisticated solution passing on the data in two different constants
+- Generic Card component
+  - Initially I wanted to create a generic card component that takes props as inputs passed from CardContainer and Casts or Episodes. However, it failed due to the mapping of the Cards within the CardContainer. 
+  - Hence, I've created two JSX divs for each Cast and Episode within the Card component and let it switch between those depending on the state set for the clicked buttons `Cast` or `Episodes`. 
+
+## Neurons test description
 Be sure to read **all** of this document carefully, and follow the guidelines within.
 
-## Context
+### Context
 
 Use React w/ TypeScript to implement the following mock-up. You will need to leverage an open API for Tv Show data to fill in the details and functionality as described below. You are only required to complete the desktop views, unless otherwise instructed.
 
@@ -12,9 +59,9 @@ Use this Figma file to see the Product UX/Design guidelines, you are welcome to 
 
 Nb! Some screens are not designed but there are inspirations for implementation, part of the test is to see your approach to the more unknown. 
 
-## Requirements
+### Requirements
 
-### TV Show data API
+#### TV Show data API
 
 TV Show and Cast data 
 https://api.tvmaze.com/shows/143?embed=cast
@@ -27,7 +74,7 @@ https://www.tvmaze.com/api
 
 
 
-### Page Structure
+#### Page Structure
 
 ```
 Main
@@ -57,7 +104,7 @@ Detail Cards(Episodes)
   - Air time
 ```
 
-### Functionality
+#### Functionality
 - There are 2 tab of content one for Cast members and one for the Episodes 
 - Under each pages you can search for 
  - Cast : Name or Character name 
@@ -69,7 +116,7 @@ Detail Cards(Episodes)
 
 
 
-### Tech stack
+#### Tech stack
 
 - TypeScript oriented (JavaScipt can be used, but we strongly prefer TypeScript)
   - Use **React**
@@ -99,7 +146,7 @@ Detail Cards(Episodes)
 Not that we are against these frameworks but more that we can see how you would build these components yourself. 
 
 
-### Bonus
+#### Bonus
 
 - Make the application accessible
 - Write clear **documentation** on how the app was designed and how to run the code
@@ -111,7 +158,7 @@ Not that we are against these frameworks but more that we can see how you would 
 - Created a Responsive version of the application
 - Describe improvement opportunities when you conclude
 
-## What We Care About
+### What We Care About
 Use any libraries that you would normally use if this were a real production App. Be prepared to justify those choices. Please note: _we care more about how you approach the problem than the end result. Code cleanliness and design are more important than using the "right" library._
 
 Here's what you should strive for:
@@ -121,7 +168,7 @@ Here's what you should strive for:
 - Extensible code
 - Thorough explanation of decisions and tradeoffs
 
-## Questionnaire
+### Questionnaire
 Please fill out this questionnaire and commit your answers to the repo 
 - What is your preferred reactjs stack today for building a modern SaaS application? What libraries and frameworks would be incl. And why? 
 - How would you approach an application where multiple products and multiple teams working across the application? 
@@ -129,7 +176,7 @@ Please fill out this questionnaire and commit your answers to the repo
 - How to ensure good quality and high performance code? 
 - Why is testing important, how would you embed it in a team and with what tools? 
 
-## Q&A
+### Q&A
 
 > Where should I send back the result when I'm done?
 
