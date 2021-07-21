@@ -9,11 +9,13 @@ const Episodes = ({ data, isCast, isEpisode }) => {
     
     return(
         
-        <div className="castsContainer">
-            <SearchBar 
-                searchTerm={searchTerm} 
-                handleChange={handleChange}>
-            </SearchBar>
+        <div className="episodeContainer">
+            <div className="search">
+                <SearchBar 
+                    searchTerm={searchTerm} 
+                    handleChange={handleChange}>
+                </SearchBar>
+            </div>
             <CardContainer 
                 data={searchResults}
                 isCast={isCast}

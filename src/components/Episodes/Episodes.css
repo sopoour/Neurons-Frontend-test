@@ -1,4 +1,10 @@
-.castsContainer {
+.episodeContainer {
     display: flex;
     flex-direction: column;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 10% 1% 1%;
 }

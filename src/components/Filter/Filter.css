@@ -1,11 +1,12 @@
 .filterWrapper {
     position: relative;
     display: inline-block;
+    margin-left: 2%;
 }
 
 .filterButton {
     border-radius: 5px;
-    padding: 8px 16px;
+    padding: 7px 16px;
     background-color: white;
     border-color: rgba(24, 146, 121, 1);
     border-style: solid;
@@ -23,11 +24,11 @@
 
 
 .filterModal {
-    padding: 15%;
+    padding: 1.5rem 3.2rem 1.5rem 1.5rem;
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
     z-index: 2;
     max-height: calc(100vh - 152px);
@@ -38,8 +39,6 @@
 }
 
 .filterModal select {
-    display: flex;
-    justify-content: flex-start;
     cursor: pointer;
     outline: none;
     padding: 1%;
@@ -54,9 +53,8 @@
     border-top-style: solid;
     margin-top: 15%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0.75rem 0.5rem 0.25rem 0.5rem;
+    align-self: flex-end;
+    padding: 0.75rem 0 0.25rem 0;
 }
 
 .filterModalActions button {

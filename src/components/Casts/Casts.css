@@ -5,5 +5,7 @@
 
 .searchFilter {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-content: space-around;
+    margin: 2% 0 2% 1%;
 }

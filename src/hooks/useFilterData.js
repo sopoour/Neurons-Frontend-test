@@ -17,6 +17,7 @@ const useFilterData = (data) => {
       setSearchterm(event.target.value);
     };
 
+    //Problem: somehow handleUpdate doesn't work or just doesn't get called correctly (need to dig more into it)
     const handleUpdate = (event) => {
       setIsOpen(false);
       setFilter({
@@ -25,11 +26,13 @@ const useFilterData = (data) => {
       })
     };
 
-    /*
+    /* How useEffect works:
     * 1. useEffect hook executes whenever dependency of method gets changed
     * 2. dependency searchTerm gets changed on every input by user
     * 3. this in turn executes function in first argument (=results)
     */
+
+    //Limitation: right now only one filter at at time useable (search || country filter || gender filter)
     useEffect(() => {
       (async () => {
           const results = await data.filter(value => {
@@ -41,6 +44,7 @@ const useFilterData = (data) => {
                   : (filter.country
                       ? value.person.country.name.toLowerCase().includes(filter.country.toLowerCase())
                       : (filter.gender
+                          //Problem: for some reason you can only filter after Female and not Male; for Male it shows all
                           ? value.person.gender.toLowerCase().includes(filter.gender.toLowerCase())
                           : data))
               )

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './Nav.css';
 import logo from './logo-pied-piper.png'
 

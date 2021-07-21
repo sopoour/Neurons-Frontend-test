@@ -8,7 +8,7 @@ const useSearchData = (data) => {
       setSearchterm(event.target.value);
     };
 
-    /*
+    /* How useEffect works:
     * 1. useEffect hook executes whenever dependency of method gets changed
     * 2. dependency searchTerm gets changed on every input by user
     * 3. this in turn executes function in first argument (=results)

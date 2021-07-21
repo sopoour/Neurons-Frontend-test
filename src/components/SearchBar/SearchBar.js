@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import './SearchBar.css'
 
 const SearchBar  = ({ searchTerm, handleChange }) => {
@@ -9,8 +8,8 @@ const SearchBar  = ({ searchTerm, handleChange }) => {
                 type='text' 
                 placeholder='&#xf002; Search...'
                 //searchTerm saves the data from search input on every occurance of change event
-                //handleChange takes event object as arg and set current value of form to searchTerm state using setSearchTerm method
                 value={searchTerm}
+                //handleChange takes event object as arg and set current value of form to searchTerm state using setSearchTerm method
                 onChange={handleChange}>
             </input>
         </div>

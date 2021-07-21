@@ -8,12 +8,13 @@ const Card  = ({ data, isCast, isEpisode}) => {
 
     return(
         <div className="cardsWrapper">
+            {/*when Cast button clicked (isCast=true)*/}
             {isCast && (
                 <div className="cards">
                     <div className="blockImage">
                         <img alt='character_img' src={ data.person.image.medium }></img>
                         <i className={gender}></i>
-                        <a className="name" href={data.person.url} target="_blank">
+                        <a className="name" href={data.person.url} target="_blank" rel="noreferrer">
                             <p>{data.person.name}</p>
                         </a> 
                     </div>
@@ -21,20 +22,20 @@ const Card  = ({ data, isCast, isEpisode}) => {
                         <ul >
                             <li><b>Country: </b>{data.person.country.name}</li>
                             <li><b>Birthday: </b>{data.person.birthday}</li>
-                            <a href={data.character.url} target="_blank">
+                            <a href={data.character.url} target="_blank" rel="noreferrer">
                                 <li><b>Character: </b>{data.character.name}</li>
                             </a>
                         </ul>
                     </div>
                 </div>
             )}
-
+            {/*when Episode button clicked (isEpisode=true)*/}
             {isEpisode && (
                 <div className="cards">
                     <div className="blockImage">
                         <img alt='movie_img' src={ data.image.medium }></img>
                         <p className="series">S{data.season}/E{data.number}</p>
-                        <a className="name" href={data.url} target="_blank">
+                        <a className="name" href={data.url} target="_blank" rel="noreferrer">
                             <p>{data.name}</p>
                         </a> 
                     </div>
@@ -53,7 +54,3 @@ const Card  = ({ data, isCast, isEpisode}) => {
 };
 
 export default Card;
-
-/**
- * 
- */

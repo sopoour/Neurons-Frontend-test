@@ -1,7 +1,6 @@
 .nav {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: flex-start;
     align-content: flex-end;
 }
@@ -15,25 +14,25 @@
     width: 210px;
     height: 34px;
     align-self: flex-end;
-    margin: 2%;
+    margin: 0 1% 1% 1%;
     cursor: pointer;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
 .inactBtn {
-    background: rgba(196, 196, 196, 0.5);
+    background: rgba(255, 255, 255, 0.2);
     border: none;
     border-radius: 8px;
     width: 210px;
     height: 34px;
     align-self: flex-end;
-    margin: 2%;
+    margin: 0 1% 1% 1%;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .inactBtn:hover {
-    box-shadow: 0 2px 6px rgba(24, 146, 121, 0.8);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.6);
     border-color: #189279;
 }
 

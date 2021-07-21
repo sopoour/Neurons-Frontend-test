@@ -12,14 +12,14 @@ const useApiData = () => {
                 'https://api.tvmaze.com/shows/143/cast'
             );
             const dataCast = await responseCast.json()
-            //Update apiData state with the data we get from API
+            //Update castData state with the data we get from API
             setCastData(dataCast);
 
             const responseEpisode = await fetch(
                 'https://api.tvmaze.com/shows/143/episodes'
             );
             const dataEpisode = await responseEpisode.json()
-            //Update apiData state with the data we get from API
+            //Update episodeData state with the data we get from API
             setEpisodeData(dataEpisode);
         }) 
         //call function right away
