@@ -45,7 +45,7 @@ const useFilterData = (data) => {
                       ? value.person.country.name.toLowerCase().includes(filter.country.toLowerCase())
                       : (filter.gender
                           //Problem: for some reason you can only filter after Female and not Male; for Male it shows all
-                          ? value.person.gender.toLowerCase().includes(filter.gender.toLowerCase())
+                          ? value.person.gender.includes(filter.gender)
                           : data))
               )
           }           
