@@ -8,7 +8,8 @@ import Episodes from './components/Episodes/Episodes';
 
 const App = () => {
     const {castData, episodeData} = useApiData();
-
+    
+    //When using TS: use only one state isCurrentView that has defined types 'cast' | 'episode' and then use it in the JSX as {isCurrentView == 'cast' && ...
     const [isCast, setIsCast] = useState(true);
     const [isEpisode, setIsEpisode] = useState(false);
 
